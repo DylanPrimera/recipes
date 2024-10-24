@@ -1,8 +1,8 @@
+const API_URL = `${import.meta.env.VITE_API_URL}?apiKey=${
+  import.meta.env.VITE_API_KEY
+}`;
 export const GetRecipes = async () => {
-  const API_URL = `${import.meta.env.VITE_API_URL}?apiKey=${
-    import.meta.env.VITE_API_KEY
-  }`;
-  const response = await fetch(API_URL, {
+  const response = await fetch(API_URL+'&number=9', {
     headers: {
       "Content-Type": "application/json",
     },
