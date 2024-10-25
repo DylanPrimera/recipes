@@ -2,6 +2,7 @@ import { Recipe } from "../types";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 // @ts-ignore
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 interface Props {
   data: Recipe[];
@@ -29,9 +30,11 @@ export const SlideCards: React.FC<Props> = ({ data }) => {
       {data?.map((recipe: Recipe) => (
         <SplideSlide key={recipe.id}>
           <div className="recipe-card">
-            <p className="px-3">{recipe.title}</p>
-            <img src={recipe.image} alt={recipe.title} />
-            <div className="gradient"></div>
+            <Link to={`/recipe/${recipe.id}`}>
+              <p className="px-3">{recipe.title}</p>
+              <img src={recipe.image} alt={recipe.title} />
+              <div className="gradient"></div>
+            </Link>
           </div>
         </SplideSlide>
       ))}
