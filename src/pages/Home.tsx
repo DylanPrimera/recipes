@@ -4,8 +4,8 @@ import { Veggie } from "../components/Veggie"
 export const Home = () => {
   return (
     <div>
-      <Veggie/>
       <Popular/>
+      <Veggie/>
     </div>
   )
 }

@@ -87,3 +87,11 @@ export interface Metric {
   unitShort: string;
   unitLong: string;
 }
+
+export interface Cuisine {
+  id:        number;
+  title:     string;
+  image:     string;
+  imageType: string;
+}
+

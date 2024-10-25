@@ -1,10 +1,15 @@
+import { BrowserRouter } from "react-router-dom";
+import { Category } from "./components/Category";
 import { Pages } from "./pages/Pages";
 
 function App() {
   return (
-    <div className="w-[1200px] m-auto">
-      <Pages/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Category />
+        <Pages />
+      </div>
+    </BrowserRouter>
   );
 }
 
